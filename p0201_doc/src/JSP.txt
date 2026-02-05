@@ -1,0 +1,81 @@
+
+1. https://www.eclipse.org/downloads/packages/
+Eclipse IDE for Enterprise Java and Web Developers
+Windows: x86_64 다운로드
+
+2. https://tomcat.apache.org/download-11.cgi
+Download -> Tomcat11 -> Core: -> Windows zip (pgp, sha512) 다운로드
+
+
+3. 깃허브
+JSP7 생성
+
+4. workspace
+JSP7 생성
+
+5. 이클립스
+5-1. window -> Preferences -> enc -> Default encoding : utf-8 (update)
+5-2. 톰켓서버 연결
+      server locations : use tomcat installation
+      server options : publish module contexts... (check),   Modules auto reload... (check)
+      ports : http/1.1  port (8080 -> 8181 로 변경)
+
+
+#server.xml
+
+Get방식
+<Connector URIEncoding="utf-8" connectionTimeout="20000" port="8181" protocol="HTTP/1.1" redirectPort="8443"/>
+
+Post방식
+request.setCharacterEncoding("utf-8");
+response.setContentType("text/html;charset=utf-8");
+
+
+JSP
+- jsp태그
+- 확장자 : jsp
+
+스프링 
+- jsp 태그 지원 중단
+- 기존 html 파일형태는 모두 jsp로 구성
+- thymeleaf 타임리프 태그 사용
+- 확장자 : html
+
+
+# Run as 
+-Djava.net.preferIPv4Stack=true
+
+
+# form
+
+
+
+jdbc:oracle:thin:@localhost:1521:xe
+
+
+<Resource
+	    auth = "Container"
+	    driverClassName = "oracle.jdbc.driver.OracleDriver"
+	    url = "jdbc:oracle:thin:@localhost:1521:xe"
+	    username = "ora_user"
+	    password = "1111"
+	    name="jdbc/Oracle21"
+	    type="javax.sql.DataSource"
+	    maxActive = "50"
+	    maxWait = "1000"
+     />
+
+#
+https://www.servlets.com/cos/
+
+#
+https://mvnrepository.com/
+jstl-api
+Jakarta Standard Tag Library API » 3.0.0
+jar
+
+https://mvnrepository.com/artifact/jakarta.servlet.jsp.jstl/jakarta.servlet.jsp.jstl-api/3.0.0
+https://mvnrepository.com/artifact/org.glassfish.web/jakarta.servlet.jsp.jstl/3.0.1
+https://mvnrepository.com/artifact/javax.servlet/jstl/1.2
+
+
