@@ -1,0 +1,21 @@
+package com.java.www.service;
+
+import java.util.List;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import com.java.www.Dao.MemberDao;
+import com.java.www.Dto.MemberDto;
+
+public class MemberListServiceImpl implements MemberService {
+
+	@Override
+	public void execute(HttpServletRequest request, HttpServletResponse response) {
+		MemberDao mdao = new MemberDao();
+		List<MemberDto> list = mdao.memberList();
+		request.setAttribute("list", list);
+		
+	}
+
+}
